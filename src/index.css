@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .outline-line {
+    outline: 1px solid;
+  }
+
+  .line {
+    width: 30px;
+    height: 3px;
+    margin: 7px 0;
+    background-color: #008dcb;
+    transition: all 0.3s ease-out;
+    transform-origin: center;
+  }
+
+  .line1.trans {
+    transform: rotate(43deg);
+    transform-origin: 0px;
+  }
+
+  .line2.trans {
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  .line3.trans {
+    transform: rotate(-43deg);
+    transform-origin: 0px;
+  }
+
+  .transform {
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+  }
+
+  .transform.trans {
+    transform: translateX(0%);
+  }
+
+  .gradient {
+    box-shadow: rgba(7, 9, 14, 1) 0px -80px 36px -28px inset;
+  }
+
+  
+}
