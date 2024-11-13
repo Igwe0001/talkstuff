@@ -3,7 +3,7 @@ import { assets } from "../../assets/assets";
 
 const Profile = ({className}) => {
   return (
-    <div className={`${className} px-2 py-3 w-[250px] rounded-md bg-white`}>
+    <div className={`${className} px-2 py-2 w-[250px] rounded-md bg-white shadow`}>
       <div className="flex items-center justify-between">
         <div className="flex gap-2 items-center">
           <div>
@@ -31,7 +31,7 @@ const Profile = ({className}) => {
         </div>
         <span className="font-bold text-sm">23</span>
       </div>
-      <div className="py-3 flex justify-between ">
+      <div className="pt-3 flex justify-between ">
         <div className="flex gap-2">
           <div className="py-1 px-2 outline outline-1 outline-[#E2E4E9] text-[#525866] rounded-full text-[7px]">
             Hip hop

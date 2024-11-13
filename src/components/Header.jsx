@@ -2,7 +2,7 @@ import { useState } from "react";
 import { assets } from "../assets/assets";
 import Button from "./UI/Button";
 
-const Header = () => {
+const Header = ({ activeLink }) => {
   const [hamburger, setHamburger] = useState(false);
 
   const hamburgerEventHandler = () => {
@@ -10,24 +10,39 @@ const Header = () => {
   };
 
   return (
-    <header className="h-20 w-full shadow bg-white flex  items-end px-5 pb-3">
+    <header className="h-16 w-full shadow bg-white flex  items-end px-5 pb-3 fixed z-[10000]">
       <nav className="max-w-7xl w-full mx-auto flex justify-between items-center ">
         <div className="relative z-20">
           <img src={assets.logo} className="text-2xl" alt="logo" />
         </div>
         <ul className=" gap-6 hidden sm:flex">
           <li>
-            <a className="text-textGrey" href="">
+            <a
+              className={`text-textGrey font-medium ${
+                activeLink === "Home" ? "text-[#008dcb]" : ""
+              }`}
+              href="#Home"
+            >
               Home
             </a>
           </li>
           <li>
-            <a className="text-textGrey" href="">
+            <a
+              className={`text-textGrey font-medium ${
+                activeLink === "Features" ? "text-[#008dcb]" : ""
+              }`}
+              href="#Features"
+            >
               Features
             </a>
           </li>
           <li>
-            <a className="text-textGrey" href="">
+            <a
+              href="#Benefits"
+              className={`text-textGrey font-medium ${
+                activeLink === "Benefits" ? "text-[#008dcb]" : ""
+              }`}
+            >
               Benefits
             </a>
           </li>
@@ -50,23 +65,38 @@ const Header = () => {
           ></div>
         </div>
         <ul
-          className={`gap-12 sm:hidden absolute w-full min-h-screen h-full transform top-0 left-0 bg-white z-10 p-8 flex flex-col justify-center ${
+          className={`gap-12 sm:hidden absolute w-full min-h-screen transform top-0 left-0 bg-white z-10 p-8 flex flex-col justify-center ${
             hamburger ? "trans" : ""
           }`}
         >
-          <li>
-            <a className="font-bold text-3xl text-textGrey" href="">
+          <li onClick={hamburgerEventHandler}>
+            <a
+              className={`text-textGrey font-medium ${
+                activeLink === "Home" ? "text-[#008dcb]" : ""
+              }`}
+              href="#Home"
+            >
               Home
             </a>
           </li>
-          <li>
-            <a className="font-bold text-3xl text-textGrey" href="">
-              Benefits
+          <li onClick={hamburgerEventHandler}>
+            <a
+              className={`text-textGrey font-medium ${
+                activeLink === "Features" ? "text-[#008dcb]" : ""
+              }`}
+              href="#Features"
+            >
+              Features
             </a>
           </li>
-          <li className="mb-[7rem]">
-            <a className="font-bold text-3xl text-textGrey" href="">
-              Features
+          <li onClick={hamburgerEventHandler} className="mb-[7rem]">
+            <a
+              className={`text-textGrey font-medium ${
+                activeLink === "Benefits" ? "text-[#008dcb]" : ""
+              }`}
+              href="#Benefits"
+            >
+              Benefits
             </a>
           </li>
 

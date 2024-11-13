@@ -1,10 +1,10 @@
-import logo from "./logo.png";
-import x from "./x.png";
-import check from "./check.png";
+import logo from "./logo.svg";
+import x from "./x.svg";
+import check from "./check.svg";
 import kathryn from "./kathryn.jpeg";
-import map from "./map-pin.png";
-import heart from "./heart.png";
-import message from "./message-circle.png";
+import map from "./map-pin.svg";
+import heart from "./heart.svg";
+import message from "./message-circle.svg";
 import image1 from "./image-1.jpeg";
 import image2 from "./image-2.jpeg";
 import image3 from "./image-3.jpeg";
@@ -23,10 +23,15 @@ import phone7 from "./phone-7.png";
 import phone8 from "./phone-8.png";
 import phone9 from "./phone-9.png";
 import phone10 from "./phone-10.svg";
+import phone11 from "./phone-11.png";
+import phone12 from "./phone-12.png";
+import phone13 from "./phone-13.png";
+import phone14 from "./phone-14.png";
+import phone15 from "./phone-15.png";
 import spiral from "./spiral.png";
 import spiral2 from "./spiral-2.png";
 import spiral3 from "./spiral-3.svg";
-import sparks from "./sparkles.png";
+import sparks from "./sparkles.svg";
 import mail from "./mail.png";
 import spiralsvg from "./spiralsvg.svg";
 import arrowdownsvg from "./arrow-down-svg.svg";
@@ -66,6 +71,11 @@ export const assets = {
   phone8,
   phone9,
   phone10,
+  phone11,
+  phone12,
+  phone13,
+  phone14,
+  phone15,
   spiral,
   sparks,
   spiral2,

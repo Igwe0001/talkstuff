@@ -5,7 +5,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
   }
+
+ 
 }
 
 @layer utilities {
@@ -50,5 +53,12 @@
     box-shadow: rgba(7, 9, 14, 1) 0px -80px 36px -28px inset;
   }
 
-  
+  .my-scrollable-container {
+    overflow-y: scroll; /* or auto */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .my-scrollable-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Edge */
+  }
 }
