@@ -71,8 +71,8 @@ const Header = ({ activeLink }) => {
         >
           <li onClick={hamburgerEventHandler}>
             <a
-              className={`text-textGrey font-medium ${
-                activeLink === "Home" ? "text-[#008dcb]" : ""
+              className={`text-textGrey text-3xl  font-medium ${
+                activeLink === "Home" ? "active" : ""
               }`}
               href="#Home"
             >
@@ -81,8 +81,8 @@ const Header = ({ activeLink }) => {
           </li>
           <li onClick={hamburgerEventHandler}>
             <a
-              className={`text-textGrey font-medium ${
-                activeLink === "Features" ? "text-[#008dcb]" : ""
+              className={`text-textGrey text-3xl font-medium ${
+                activeLink === "Features" ? "active" : ""
               }`}
               href="#Features"
             >
@@ -91,8 +91,8 @@ const Header = ({ activeLink }) => {
           </li>
           <li onClick={hamburgerEventHandler} className="mb-[7rem]">
             <a
-              className={`text-textGrey font-medium ${
-                activeLink === "Benefits" ? "text-[#008dcb]" : ""
+              className={`text-textGrey text-3xl font-medium ${
+                activeLink === "Benefits" ? "active" : ""
               }`}
               href="#Benefits"
             >
