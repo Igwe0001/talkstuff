@@ -45,8 +45,8 @@ const Benefits = ({ id, onIntersectionChange }) => {
             <div className="flex flex-2 md:flex-1 z-[2] my-scrollable-container">
               <div className="h-full w-full flex flex-col max-w-[350px] md:max-w-none mx-auto gap-5 items-center font-inter">
                 <div className="md:w-[70%] flex flex-col gap-5 pb-5">
-                  {/* <img src={assets.phone11} alt="" /> */}
-                  <LazyImage src={assets.phone11} alt="" />
+                  <img src={assets.phone11} alt="" />
+                  {/* <LazyImage src={assets.phone11} alt="" /> */}
                   <div className="text-center md:text-left">
                     <h2 className="text-white font-medium">Easy Connections</h2>
                     <p className="text-[#E9E9E9]">
@@ -56,8 +56,8 @@ const Benefits = ({ id, onIntersectionChange }) => {
                   </div>
                 </div>
                 <div className="md:w-[70%] flex flex-col gap-5 pb-5">
-                  {/* <img src={assets.phone12} alt="" /> */}
-                  <LazyImage src={assets.phone12} alt="" />
+                  <img src={assets.phone12} alt="" />
+                  {/* <LazyImage src={assets.phone12} alt="" /> */}
                   <div className="text-center md:text-left">
                     <h2 className="text-white font-medium">Secure Messaging</h2>
                     <p className="text-[#E9E9E9]">
@@ -67,8 +67,8 @@ const Benefits = ({ id, onIntersectionChange }) => {
                   </div>
                 </div>
                 <div className="md:w-[70%] flex flex-col gap-5 pb-5">
-                  {/* <img src={assets.phone13} alt="" /> */}
-                  <LazyImage src={assets.phone13} alt="" />
+                  <img src={assets.phone13} alt="" />
+                  {/* <LazyImage src={assets.phone13} alt="" /> */}
                   <div className="text-center md:text-left">
                     <h2 className="text-white font-medium">
                       Built-In Marketplace
@@ -80,8 +80,8 @@ const Benefits = ({ id, onIntersectionChange }) => {
                   </div>
                 </div>
                 <div className="md:w-[70%] flex flex-col gap-5 pb-5">
-                  {/* <img src={assets.phone14} alt="" /> */}
-                  <LazyImage src={assets.phone14} alt="" />
+                  <img src={assets.phone14} alt="" />
+                  {/* <LazyImage src={assets.phone14} alt="" /> */}
                   <div className="text-center md:text-left">
                     <h2 className="text-white font-medium">
                       Personalized Experience
@@ -93,8 +93,8 @@ const Benefits = ({ id, onIntersectionChange }) => {
                   </div>
                 </div>
                 <div className="md:w-[70%] flex flex-col gap-5 pb-5">
-                  {/* <img src={assets.phone15} alt="" /> */}
-                  <LazyImage src={assets.phone15} alt="" />
+                  <img src={assets.phone15} alt="" />
+                  {/* <LazyImage src={assets.phone15} alt="" /> */}
                   <div className="text-center md:text-left">
                     <h2 className="text-white font-medium">
                       Real-Time Notifications

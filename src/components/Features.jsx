@@ -28,16 +28,16 @@ const Features = ({ id, onIntersectionChange }) => {
           <div className="max-w-7xl w-full  mx-auto pt-10  px-5 relative">
             <div className="mt-10">
               <div className="flex items-center flex-col">
-                {/* <img
-              className="w-12 h-12 object-contain block p-3 rounded-full bg-blueButton"
-              src={assets.sparks}
-              alt="sparks"
-            /> */}
-                <LazyImage
+                <img
                   className="w-12 h-12 object-contain block p-3 rounded-full bg-blueButton"
                   src={assets.sparks}
                   alt="sparks"
                 />
+                {/* <LazyImage
+                  className="w-12 h-12 object-contain block p-3 rounded-full bg-blueButton"
+                  src={assets.sparks}
+                  alt="sparks"
+                /> */}
                 <div className="mt-5 text-center max-w-[800px]">
                   <h1 className="text-[#212121] text-2xl font-inter">
                     Features
@@ -57,16 +57,16 @@ const Features = ({ id, onIntersectionChange }) => {
                 <div className="flex flex-col md:flex-row h-full">
                   <div className="flex-1 bg-[#FFF7F0] rounded-2xl flex items-end justify-center">
                     <div className="w-[25%] md:w-[45%] ">
-                      {/* <img
-                    className="w-full h-auto object-contain"
-                    src={assets.phone2}
-                    alt="phone"
-                  /> */}
-                      <LazyImage
+                      <img
                         className="w-full h-auto object-contain"
                         src={assets.phone2}
                         alt="phone"
                       />
+                      {/* <LazyImage
+                        className="w-full h-auto object-contain"
+                        src={assets.phone2}
+                        alt="phone"
+                      /> */}
                     </div>
                   </div>
                   <div className="flex-1  flex text-center md:text-left items-center md:pl-20 md:py-20">
@@ -94,16 +94,16 @@ const Features = ({ id, onIntersectionChange }) => {
                 <div className="flex flex-col md:flex-row-reverse h-full">
                   <div className="flex-1 bg-[#F0FAFF] rounded-2xl flex items-end justify-center">
                     <div className="w-[25%] md:w-[45%]">
-                      {/* <img
-                    className="w-full h-auto object-contain"
-                    src={assets.phone4}
-                    alt="phone"
-                  /> */}
-                      <LazyImage
+                      <img
                         className="w-full h-auto object-contain"
                         src={assets.phone4}
                         alt="phone"
                       />
+                      {/* <LazyImage
+                        className="w-full h-auto object-contain"
+                        src={assets.phone4}
+                        alt="phone"
+                      /> */}
                     </div>
                   </div>
                   <div className="flex-1  flex text-center md:text-left items-center md:pr-20 md:py-20">
@@ -131,16 +131,16 @@ const Features = ({ id, onIntersectionChange }) => {
                 <div className="flex flex-col md:flex-row h-full">
                   <div className="flex-1 bg-[#FFF0FA] rounded-2xl flex items-end justify-center">
                     <div className="w-[25%] md:w-[45%]">
-                      {/* <img
-                    className="w-full h-auto object-contain"
-                    src={assets.phone3}
-                    alt="phone"
-                  /> */}
-                      <LazyImage
+                      <img
                         className="w-full h-auto object-contain"
                         src={assets.phone3}
                         alt="phone"
                       />
+                      {/* <LazyImage
+                        className="w-full h-auto object-contain"
+                        src={assets.phone3}
+                        alt="phone"
+                      /> */}
                     </div>
                   </div>
                   <div className="flex-1  flex text-center md:text-left items-center md:pl-20 md:py-20">
@@ -167,16 +167,16 @@ const Features = ({ id, onIntersectionChange }) => {
           </div>
           <div className=" min-h-[500px] max-w-7xl overflow-hidden mx-auto px-5 md:px-0 mt-20  bg-spiral-2 bg-contain relative">
             <div className="w-[50%] absolute left-[50%] translate-x-[-50%] z-[1]">
-              {/* <img
-            src={assets.spiral2}
-            className="w-full h-auto object-contain"
-            alt=""
-          /> */}
-              <LazyImage
+              <img
                 src={assets.spiral2}
                 className="w-full h-auto object-contain opacity-10"
                 alt=""
               />
+              {/* <LazyImage
+                src={assets.spiral2}
+                className="w-full h-auto object-contain opacity-10"
+                alt=""
+              /> */}
             </div>
             <div className="min-h-[500px]  w-full flex items-end z-10 relative">
               <div className="h-[70%] w-full mx-auto">
@@ -187,16 +187,16 @@ const Features = ({ id, onIntersectionChange }) => {
                   <div className="flex bg-white max-w-[390px]  flex-col items-center rounded-t-lg overflow-hidden">
                     <div className="bg-[#F9F9FB] flex flex-col items-center ">
                       <div className="w-[50%] mt-10">
-                        {/* <img
-                      className="w-full h-auto object-contain"
-                      src={assets.phone5}
-                      alt=""
-                    /> */}
-                        <LazyImage
+                        <img
                           className="w-full h-auto object-contain"
                           src={assets.phone5}
                           alt=""
                         />
+                        {/* <LazyImage
+                          className="w-full h-auto object-contain"
+                          src={assets.phone5}
+                          alt=""
+                        /> */}
                       </div>
                     </div>
                     <h2 className="my-1 font-inter text-center text-[#34363C]">
@@ -206,16 +206,16 @@ const Features = ({ id, onIntersectionChange }) => {
                   <div className="flex bg-white max-w-[390px] min-h-[200px] flex-col items-center rounded-t-lg overflow-hidden">
                     <div className="bg-[#F9F9FB] flex flex-col items-center ">
                       <div className="w-[50%] mt-10">
-                        {/* <img
-                      className="w-full h-auto object-contain"
-                      src={assets.phone6}
-                      alt=""
-                    /> */}
-                        <LazyImage
+                        <img
                           className="w-full h-auto object-contain"
                           src={assets.phone6}
                           alt=""
                         />
+                        {/* <LazyImage
+                          className="w-full h-auto object-contain"
+                          src={assets.phone6}
+                          alt=""
+                        /> */}
                       </div>
                     </div>
                     <h2 className="my-1 font-inter text-center text-[#34363C]">
@@ -225,16 +225,16 @@ const Features = ({ id, onIntersectionChange }) => {
                   <div className="flex bg-white max-w-[390px] min-h-[200px] flex-col items-center rounded-t-lg overflow-hidden">
                     <div className="bg-[#F9F9FB] flex flex-col items-center ">
                       <div className="w-[50%] mt-10">
-                        {/* <img
-                      className="w-full h-auto object-contain"
-                      src={assets.phone7}
-                      alt=""
-                    /> */}
-                        <LazyImage
+                        <img
                           className="w-full h-auto object-contain"
                           src={assets.phone7}
                           alt=""
                         />
+                        {/* <LazyImage
+                          className="w-full h-auto object-contain"
+                          src={assets.phone7}
+                          alt=""
+                        /> */}
                       </div>
                     </div>
                     <h2 className="my-1 font-inter text-center text-[#34363C]">
@@ -247,16 +247,16 @@ const Features = ({ id, onIntersectionChange }) => {
           </div>
           <div className="w-full min-h-[620px] px-5  mx-auto mt-32 flex items-center pb-[30px] md:pb-0 bg-[#00405C] relative">
             <div className="w-full absolute left-[50%] translate-x-[-50%] z-[1]">
-              {/* <img
-            src={assets.spiral2}
-            className="w-full h-auto object-contain"
-            alt=""
-          /> */}
-              <LazyImage
+              <img
                 src={assets.spiral2}
                 className="w-full h-auto object-contain opacity-[0.01]"
                 alt=""
               />
+              {/* <LazyImage
+                src={assets.spiral2}
+                className="w-full h-auto object-contain opacity-[0.01]"
+                alt=""
+              /> */}
             </div>
             <div className="w-full h-[60px] md:h-[100px] absolute top-[-40px] sm:top-[-20px] sm:skew-y-[-3deg] lg:top-[-60px] md:top-[-40px] bg-white left-0 skew-y-[-6deg] lg:skew-y-[-3deg]"></div>
 
@@ -299,16 +299,16 @@ const Features = ({ id, onIntersectionChange }) => {
               </div>
               <div className="flex-1  relative flex items-center justify-end">
                 <div className="max-w-[420px] md:translate-x-[10px] xl:translate-x-[135px]">
-                  {/* <img
-                className="w-full h-auto object-contain"
-                src={assets.phone8}
-                alt=""
-              /> */}
-                  <LazyImage
+                  <img
                     className="w-full h-auto object-contain"
                     src={assets.phone8}
                     alt=""
                   />
+                  {/* <LazyImage
+                    className="w-full h-auto object-contain"
+                    src={assets.phone8}
+                    alt=""
+                  /> */}
                 </div>
               </div>
             </div>
