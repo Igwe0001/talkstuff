@@ -8,7 +8,10 @@ const Benefits = ({ id, onIntersectionChange }) => {
     <InView
       as="section"
       id={id}
-      onChange={(inView) => onIntersectionChange(id, inView)}
+      onChange={(inView) => {
+        console.log(`Section ${id} is in view:`, inView);
+        onIntersectionChange(id, inView);
+      }}
       threshold={0.5} // Adjust as needed for when you want the active link to change
     >
       {({ ref }) => (
