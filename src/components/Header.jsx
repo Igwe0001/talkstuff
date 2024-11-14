@@ -40,7 +40,7 @@ const Header = ({ activeLink }) => {
             <a
               href="#Benefits"
               className={`text-textGrey font-medium ${
-                activeLink === "Benefits" ? "text-[#008dcb]" : ""
+                activeLink === "Benefits" ? console.log('benefits working') : ""
               }`}
             >
               Benefits
