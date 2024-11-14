@@ -19,7 +19,7 @@ const Header = ({ activeLink }) => {
           <li>
             <a
               className={`text-textGrey font-medium ${
-                activeLink === "Home" ? "text-blueButton" : ""
+                activeLink === "Home" ? "active" : ""
               }`}
               href="#Home"
             >
@@ -29,7 +29,7 @@ const Header = ({ activeLink }) => {
           <li>
             <a
               className={`text-textGrey font-medium ${
-                activeLink === "Features" ? "text-blueButton" : ""
+                activeLink === "Features" ? "active" : ""
               }`}
               href="#Features"
             >
@@ -40,7 +40,7 @@ const Header = ({ activeLink }) => {
             <a
               href="#Benefits"
               className={`text-textGrey font-medium ${
-                activeLink === "Benefits" ? "text-blueButton" : ""
+                activeLink === "Benefits" ? "active" : ""
               }`}
             >
               Benefits

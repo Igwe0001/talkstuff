@@ -61,4 +61,8 @@
   .my-scrollable-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Edge */
   }
+
+  .active {
+    color: #008dcb !important;
+  }
 }
