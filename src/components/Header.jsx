@@ -48,7 +48,7 @@ const Header = ({ activeLink }) => {
           </li>
         </ul>
         <Button variant="white" className=" hidden sm:block">
-          Download App
+          <a href="#Downloads">Download App</a>
         </Button>
         <div
           onClick={hamburgerEventHandler}
@@ -101,7 +101,7 @@ const Header = ({ activeLink }) => {
           </li>
 
           <Button variant="white" className="flex self-center">
-            Download App
+            <a href="#Downloads">Download App</a>
           </Button>
         </ul>
       </nav>

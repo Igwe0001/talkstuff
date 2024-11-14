@@ -36,16 +36,11 @@ const Download = () => {
               <Button variant="blue" className="">
                 Download Talkstuff
               </Button>
-              <Button
-                style={{
-                  outline: "none !important", // Remove outline with higher specificity
-                  outlineOffset: "0px !important", // Reset outline offset if needed
-                }}
-                variant="white"
-                className=" flex gap-2 items-center"
-              >
-                Learn More
-                <img src={assets.arrowdownsvg} alt="" />
+              <Button variant="white" className=" flex gap-2 items-center">
+                <a href="#Features" className=" flex gap-2 items-center">
+                  Learn More
+                  <img src={assets.arrowup} alt="" />
+                </a>
               </Button>
             </div>
           </div>

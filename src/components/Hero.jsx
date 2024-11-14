@@ -44,11 +44,13 @@ const Hero = ({ id, onIntersectionChange }) => {
               </div>
               <div className="mt-5 flex justify-center gap-6">
                 <Button variant="blue" className="">
-                  Download Talkstuff
+                  <a href="#Downloads">Download Talkstuff</a>
                 </Button>
                 <Button variant="white" className=" flex gap-2 items-center">
-                  Learn More
-                  <img src={assets.arrowdownsvg} alt="" />
+                  <a href="#Features" className=" flex gap-2 items-center">
+                    Learn More
+                    <img src={assets.arrowdownsvg} alt="" />
+                  </a>
                 </Button>
               </div>
             </div>
