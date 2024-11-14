@@ -5,7 +5,7 @@ import LazyImage from "./UI/LazyImage";
 
 const Download = () => {
   return (
-    <section className=" bg-[#07090E] w-full  relative">
+    <section id="Downloads" className=" bg-[#07090E] w-full  relative">
       <div className="max-w-7xl w-full  mx-auto pt-10  px-5 relative">
         <div className="mt-10">
           <div className="flex items-center flex-col">

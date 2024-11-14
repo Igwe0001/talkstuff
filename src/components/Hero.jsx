@@ -37,7 +37,7 @@ const Hero = ({ id, onIntersectionChange }) => {
                 <h1 className="font-inter font-bold text-3xl">
                   All in One Place
                 </h1>
-                <p className="text-textGrey text-center">
+                <p className="text-textGrey text-center mt-2">
                   Discover a new world where friendships flourish, connections
                   turn into relationships, and shopping meets socializing
                 </p>

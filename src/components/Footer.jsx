@@ -8,37 +8,32 @@ const Footer = () => {
         <div className="w-[70%] mx-auto absolute bottom-0 left-[50%] translate-x-[-50%] z-[1]">
           <img src={assets.spiral3} alt="" />
         </div>
-        <div className="flex flex-col md:flex-row md:justify-between items-center relative z-[2]">
-          <div className="flex-1 flex flex-col gap-2">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end relative z-[2]">
+          <div className="flex-1 flex flex-col  gap-2">
             <img
               src={assets.footerlogo}
-              className="block w-12 h-12 mx-auto md:mx-0"
+              className="block w-[200px] h-auto mx-auto md:mx-0"
               alt=""
             />
-            <p className="text-[#E9E9E9] text-center md:text-left ">
-              TalkStuff combines socializing, dating, and online shopping in one
-              easy-to-use app. Connect with friends, find love, and explore our
-              marketplace—all from a single platform.
-            </p>
           </div>
-          <ul className="flex justify-end pt-5 md:pt-0 flex-1 gap-3 ">
+          <ul className="flex justify-center md:justify-end pt-5 md:pt-0 flex-1 gap-3 ">
             <li>
-              <a className="text-[#7E7E7E]" href="">
+              <a className="text-[#7E7E7E]" href="#Home">
                 Home
               </a>
             </li>
             <li className="">
-              <a className="text-[#7E7E7E]" href="">
+              <a className="text-[#7E7E7E]" href="#Features">
                 Features
               </a>
             </li>
             <li>
-              <a className="text-[#7E7E7E]" href="">
+              <a className="text-[#7E7E7E]" href="#Benefits">
                 Benefits
               </a>
             </li>
             <li>
-              <a className="text-[#7E7E7E]" href="">
+              <a className="text-[#7E7E7E]" href="#Downloads">
                 Download
               </a>
             </li>
@@ -76,7 +71,7 @@ const Footer = () => {
             </span>
           </div>
         </div>
-        <div className="flex md:justify-between flex-col md:flex-row justify-center gap-2 z-[2]">
+        <div className="flex flex-col items-center md:justify-between  md:flex-row-reverse justify-center gap-2 z-[2]">
           <div className="flex items-center justify-center md:justify-start gap-5">
             <img
               src={assets.instagram}
@@ -105,7 +100,8 @@ const Footer = () => {
             />
           </div>
           <div className="text-[#7E7E7E] text-center">
-            Terms & Condition Privacy Policy
+            <span className="px-2">Terms & Condition</span>
+            <span className="px-2">Privacy Policy</span>
           </div>
           <div className="text-[#7E7E7E] text-center">
             © 2024, TalkStuff Digital Services. All Rights Reserved

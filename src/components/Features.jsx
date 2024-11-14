@@ -174,7 +174,7 @@ const Features = ({ id, onIntersectionChange }) => {
           /> */}
               <LazyImage
                 src={assets.spiral2}
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain opacity-10"
                 alt=""
               />
             </div>
@@ -183,8 +183,8 @@ const Features = ({ id, onIntersectionChange }) => {
                 <h1 className="text-center font-inter font-bold text-2xl">
                   Additional Highlights
                 </h1>
-                <div className="flex flex-wrap gap-10 justify-center  mt-12 h-full rounded-lg">
-                  <div className="flex bg-white max-w-[390px] flex-col items-center rounded-t-lg overflow-hidden">
+                <div className="flex flex-wrap gap-10 justify-center min-h-[200px]  mt-12 h-full rounded-lg">
+                  <div className="flex bg-white max-w-[390px]  flex-col items-center rounded-t-lg overflow-hidden">
                     <div className="bg-[#F9F9FB] flex flex-col items-center ">
                       <div className="w-[50%] mt-10">
                         {/* <img
@@ -203,7 +203,7 @@ const Features = ({ id, onIntersectionChange }) => {
                       Customizable Profiles
                     </h2>
                   </div>
-                  <div className="flex bg-white max-w-[390px] flex-col items-center rounded-t-lg overflow-hidden">
+                  <div className="flex bg-white max-w-[390px] min-h-[200px] flex-col items-center rounded-t-lg overflow-hidden">
                     <div className="bg-[#F9F9FB] flex flex-col items-center ">
                       <div className="w-[50%] mt-10">
                         {/* <img
@@ -222,7 +222,7 @@ const Features = ({ id, onIntersectionChange }) => {
                       Advanced Privacy Settings
                     </h2>
                   </div>
-                  <div className="flex bg-white max-w-[390px] flex-col items-center rounded-t-lg overflow-hidden">
+                  <div className="flex bg-white max-w-[390px] min-h-[200px] flex-col items-center rounded-t-lg overflow-hidden">
                     <div className="bg-[#F9F9FB] flex flex-col items-center ">
                       <div className="w-[50%] mt-10">
                         {/* <img
@@ -246,7 +246,20 @@ const Features = ({ id, onIntersectionChange }) => {
             </div>
           </div>
           <div className="w-full min-h-[620px] px-5  mx-auto mt-32 flex items-center pb-[30px] md:pb-0 bg-[#00405C] relative">
-            <div className="w-full h-[60px] md:h-[100px] absolute top-[-40px] lg:top-[-60px] bg-white left-0 skew-y-[-6deg] lg:skew-y-[-3deg]"></div>
+            <div className="w-full absolute left-[50%] translate-x-[-50%] z-[1]">
+              {/* <img
+            src={assets.spiral2}
+            className="w-full h-auto object-contain"
+            alt=""
+          /> */}
+              <LazyImage
+                src={assets.spiral2}
+                className="w-full h-auto object-contain opacity-[0.01]"
+                alt=""
+              />
+            </div>
+            <div className="w-full h-[60px] md:h-[100px] absolute top-[-40px] sm:top-[-20px] sm:skew-y-[-3deg] lg:top-[-60px] md:top-[-40px] bg-white left-0 skew-y-[-6deg] lg:skew-y-[-3deg]"></div>
+
             <div className="w-full max-w-5xl  mx-auto flex flex-col-reverse md:flex-row items-center">
               <div className="flex-1 flex items-center">
                 <div className="max-w-[450px] mt-10 md:mt-0">
@@ -269,7 +282,8 @@ const Features = ({ id, onIntersectionChange }) => {
                       <input
                         style={{
                           backgroundImage: `url(${assets.mail})`,
-                          backgroundPosition: "10px 5px",
+                          backgroundPosition: "10px 7px",
+                          backgroundSize: "25px",
                         }}
                         className="bg-no-repeat pl-12 mt-2 placeholder-gray-400 border rounded-md py-2 px-3 w-full"
                         placeholder="Enter your name"

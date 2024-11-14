@@ -55,7 +55,7 @@ const Benefits = ({ id, onIntersectionChange }) => {
                     </p>
                   </div>
                 </div>
-                <div className="w-[70%] flex flex-col gap-5 pb-5">
+                <div className="md:w-[70%] flex flex-col gap-5 pb-5">
                   {/* <img src={assets.phone12} alt="" /> */}
                   <LazyImage src={assets.phone12} alt="" />
                   <div className="text-center md:text-left">
@@ -66,7 +66,7 @@ const Benefits = ({ id, onIntersectionChange }) => {
                     </p>
                   </div>
                 </div>
-                <div className="w-[70%] flex flex-col gap-5 pb-5">
+                <div className="md:w-[70%] flex flex-col gap-5 pb-5">
                   {/* <img src={assets.phone13} alt="" /> */}
                   <LazyImage src={assets.phone13} alt="" />
                   <div className="text-center md:text-left">
@@ -79,7 +79,7 @@ const Benefits = ({ id, onIntersectionChange }) => {
                     </p>
                   </div>
                 </div>
-                <div className="w-[70%] flex flex-col gap-5 pb-5">
+                <div className="md:w-[70%] flex flex-col gap-5 pb-5">
                   {/* <img src={assets.phone14} alt="" /> */}
                   <LazyImage src={assets.phone14} alt="" />
                   <div className="text-center md:text-left">
@@ -92,7 +92,7 @@ const Benefits = ({ id, onIntersectionChange }) => {
                     </p>
                   </div>
                 </div>
-                <div className="w-[70%] flex flex-col gap-5 pb-5">
+                <div className="md:w-[70%] flex flex-col gap-5 pb-5">
                   {/* <img src={assets.phone15} alt="" /> */}
                   <LazyImage src={assets.phone15} alt="" />
                   <div className="text-center md:text-left">
