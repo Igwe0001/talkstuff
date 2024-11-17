@@ -149,10 +149,9 @@ const Footer = () => {
             </a>
           </div>
           <div className="text-[#7E7E7E] md:flex text-center">
-            <Link to="/Terms#Terms" onClick={() => window.scrollTo(0, 0)}>
-              <a href="#Terms">
+            <Link to="/Terms" onClick={() => window.scrollTo(0, 0)}>
                 <span className="px-2 block">Terms & Condition</span>
-              </a>
+             
             </Link>
             <Link to="/Privacy" onClick={() => window.scrollTo(0, 0)}>
               <span className="px-2 block">Privacy Policy</span>
