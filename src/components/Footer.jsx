@@ -47,17 +47,13 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/Disputes">
-                <a className="text-[#7E7E7E]" href="#Downloads">
-                  Disputes and resolutions
-                </a>
+              <Link to="/Disputes" onClick={() => window.scrollTo(0, 0)}>
+                <span className="text-[#7E7E7E]">Disputes and resolutions</span>
               </Link>
             </li>
             <li>
-              <Link to="/Faqs">
-                <a className="text-[#7E7E7E]" href="#Downloads">
-                  Faqs
-                </a>
+              <Link to="/Faqs" onClick={() => window.scrollTo(0, 0)}>
+                <span className="text-[#7E7E7E]">Faqs</span>
               </Link>
             </li>
           </ul>
@@ -150,8 +146,7 @@ const Footer = () => {
           </div>
           <div className="text-[#7E7E7E] md:flex text-center">
             <Link to="/Terms" onClick={() => window.scrollTo(0, 0)}>
-                <span className="px-2 block">Terms & Condition</span>
-             
+              <span className="px-2 block">Terms & Condition</span>
             </Link>
             <Link to="/Privacy" onClick={() => window.scrollTo(0, 0)}>
               <span className="px-2 block">Privacy Policy</span>

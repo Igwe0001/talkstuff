@@ -21,7 +21,8 @@ function App() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <ScrollToTop>
+      {/* <ScrollToTop>
+      </ScrollToTop> */}
         <Header activeLink={activeLink} />
         <Routes>
           <Route
@@ -34,7 +35,6 @@ function App() {
           <Route path="/Faqs" element={<Faqs />} />
         </Routes>
         <Footer />
-      </ScrollToTop>
     </div>
   );
 }
