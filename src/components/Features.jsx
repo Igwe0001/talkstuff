@@ -363,7 +363,7 @@ const Features = ({ id, onIntersectionChange }) => {
                 alt=""
               /> */}
             </div>
-            <div className="w-full h-[60px] md:h-[100px] absolute top-[-40px] sm:top-[-20px] sm:skew-y-[-3deg] lg:top-[-60px] md:top-[-40px] bg-white left-0 skew-y-[-6deg] lg:skew-y-[-3deg]"></div>
+            <div className="w-full h-[60px] md:h-[100px] absolute top-[-40px] sm:top-[-20px] sm:skew-y-[-3deg] lg:top-[-60px] md:top-[-40px] bg-white left-0 skew-y-[-6deg] lg:skew-y-[-3deg] xl:top-[-70px] xl:skew-y-[-1deg] 2xl:top-[-80px] 2xl:skew-y-[0deg]"></div>
 
             <div className="w-full max-w-5xl  mx-auto flex flex-col-reverse md:flex-row items-center">
               <div className="flex-1 flex items-center">
