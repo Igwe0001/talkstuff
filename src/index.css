@@ -7,8 +7,6 @@
     scroll-behavior: smooth;
     scrollbar-width: thin;
   }
-
- 
 }
 
 @layer utilities {
@@ -54,15 +52,83 @@
   }
 
   .my-scrollable-container {
-    overflow-y: scroll; /* or auto */
-    scrollbar-width: none; /* Firefox */
+    overflow-y: scroll;
+    scrollbar-width: none;
   }
 
   .my-scrollable-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Edge */
+    display: none;
   }
 
   .active {
     color: #008dcb !important;
+  }
+
+  .section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .section-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-content-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .mobile-content-left.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .mobile-content-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .mobile-content-right.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media screen and (min-width: 768px) {
+    .content {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .content-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .content-left.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .content-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .content-right.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .content.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

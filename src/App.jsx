@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
-
-import Benefits from "./components/Benefits";
-import Download from "./components/Download";
-import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Home from "./pages/Home";
+import Dispute from "./pages/Dispute";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Faqs from "./pages/Faqs";
 
 function App() {
   const [activeLink, setActiveLink] = useState("");
@@ -20,10 +21,16 @@ function App() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Header activeLink={activeLink} />
-      <Hero id="Home" onIntersectionChange={handleIntersectionChange} />
-      <Features id="Features" onIntersectionChange={handleIntersectionChange} />
-      <Benefits id="Benefits" onIntersectionChange={handleIntersectionChange} />
-      <Download />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home onIntersectionChange={handleIntersectionChange} />}
+        />
+        <Route path="/Disputes" element={<Dispute />} />
+        <Route path="/Privacy" element={<Privacy />} />
+        <Route path="/Terms" element={<Terms />} />
+        <Route path="/Faqs" element={<Faqs />} />
+      </Routes>
       <Footer />
     </div>
   );

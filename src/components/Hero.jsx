@@ -42,8 +42,11 @@ const Hero = ({ id, onIntersectionChange }) => {
                   turn into relationships, and shopping meets socializing
                 </p>
               </div>
-              <div className="mt-5 flex justify-center gap-6">
-                <Button variant="blue" className="">
+              <div className="mt-5 flex flex-wrap justify-center gap-6">
+                <Button
+                  variant="blue"
+                  className="transition-all duration-200 ease-in hover:translate-y-1"
+                >
                   <a href="#Downloads">Download Talkstuff</a>
                 </Button>
                 <Button variant="white" className=" flex gap-2 items-center">

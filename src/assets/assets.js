@@ -45,6 +45,7 @@ import mail01 from "./mail-01.svg";
 import location from "./location-05.svg";
 import facebook from "./facebook.svg";
 import arrowup from "./arrow-up.svg";
+import tiktok from "./tiktok.svg";
 
 export const assets = {
   logo,
@@ -93,5 +94,6 @@ export const assets = {
   linkedin,
   mail01,
   location,
-  arrowup
+  arrowup,
+  tiktok,
 };

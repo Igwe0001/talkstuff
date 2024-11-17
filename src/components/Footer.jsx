@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -16,26 +17,48 @@ const Footer = () => {
               alt=""
             />
           </div>
-          <ul className="flex justify-center md:justify-end pt-5 md:pt-0 flex-1 gap-3 ">
+          <ul className="flex flex-wrap justify-center md:justify-end pt-5 md:pt-0 flex-1 gap-3 ">
             <li>
-              <a className="text-[#7E7E7E]" href="#Home">
-                Home
-              </a>
+              <Link to="/#Home">
+                <a className="text-[#7E7E7E]" href="#Home">
+                  Home
+                </a>
+              </Link>
             </li>
             <li className="">
-              <a className="text-[#7E7E7E]" href="#Features">
-                Features
-              </a>
+              <Link to="/#Features">
+                <a className="text-[#7E7E7E]" href="#Features">
+                  Features
+                </a>
+              </Link>
             </li>
             <li>
-              <a className="text-[#7E7E7E]" href="#Benefits">
-                Benefits
-              </a>
+              <Link to="/#Benefits">
+                <a className="text-[#7E7E7E]" href="#Benefits">
+                  Benefits
+                </a>
+              </Link>
             </li>
             <li>
-              <a className="text-[#7E7E7E]" href="#Downloads">
-                Download
-              </a>
+              <Link to="/#Downloads">
+                <a className="text-[#7E7E7E]" href="#Downloads">
+                  Download
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/Disputes" reloadDocument>
+                <a className="text-[#7E7E7E]" href="/Disputes">
+                  Disputes and resolutions
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/Faqs" reloadDocument>
+                <a className="text-[#7E7E7E]" href="/Faqs">
+                  Faqs
+                </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -72,36 +95,70 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col items-center md:justify-between  md:flex-row-reverse justify-center gap-2 z-[2]">
-          <div className="flex items-center justify-center md:justify-start gap-5">
-            <img
-              src={assets.instagram}
-              className="w-5 h-5 object-contain"
-              alt=""
-            />
-            <img
-              src={assets.youtube}
-              className="w-5 h-5 object-contain"
-              alt=""
-            />
-            <img
-              src={assets.linkedin}
-              className="w-5 h-5 object-contain"
-              alt=""
-            />
-            <img
-              src={assets.facebook}
-              className="w-5 h-5 object-contain"
-              alt=""
-            />
-            <img
-              src={assets.twitter}
-              className="w-5 h-5 object-contain"
-              alt=""
-            />
+          <div className="flex items-center flex-wrap justify-center md:justify-start gap-5">
+            <a
+              href="https://www.instagram.com/talkstuff_official?igsh=bWhpdHp4ZnFvZ3Zo"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                src={assets.instagram}
+                className="w-5 h-5 object-contain"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                src={assets.youtube}
+                className="w-5 h-5 object-contain"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.tiktok.com/@talkstuff_official?_t=8rPeyBdsX5T&_r=1"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                src={assets.tiktok}
+                className="w-5 h-5 object-contain"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/Talkstuffofficial?_rdr"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                src={assets.facebook}
+                className="w-5 h-5 object-contain"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://x.com/talkstuff_app"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                src={assets.twitter}
+                className="w-5 h-5 object-contain"
+                alt=""
+              />
+            </a>
           </div>
-          <div className="text-[#7E7E7E] text-center">
-            <span className="px-2">Terms & Condition</span>
-            <span className="px-2">Privacy Policy</span>
+          <div className="text-[#7E7E7E] md:flex text-center">
+            <Link to="/Terms" reloadDocument>
+              <a href="/Terms">
+                <span className="px-2 block">Terms & Condition</span>
+              </a>
+            </Link>
+            <Link to="/Privacy" reloadDocument>
+              <a href="/Privacy">
+                <span className="px-2 block">Privacy Policy</span>
+              </a>
+            </Link>
           </div>
           <div className="text-[#7E7E7E] text-center">
             © 2024, TalkStuff Digital Services. All Rights Reserved

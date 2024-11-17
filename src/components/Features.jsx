@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import Button from "./UI/Button";
 import LazyImage from "./UI/LazyImage";
@@ -7,18 +7,25 @@ import { InView } from "react-intersection-observer";
 // import sort from '../assets/spiral-2'
 
 const Features = ({ id, onIntersectionChange }) => {
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
+
   return (
     <InView
       as="section"
       id={id}
-      onChange={(inView) => onIntersectionChange(id, inView)}
-      threshold={0.1} // Adjust as needed for when you want the active link to change
+      onChange={(inView) => {
+        onIntersectionChange(id, inView); // Parent section logic
+        if (inView) setIsSectionVisible(true);
+      }}
+      threshold={0.05} // Adjust as needed for when you want the active link to change
     >
       {({ ref }) => (
         <section
-          id="Features"
           ref={ref}
-          className=" bg-white w-full  relative scroll-mt-16"
+          id={id}
+          className={`bg-white w-full relative scroll-mt-16 section ${
+            isSectionVisible ? "section-visible" : ""
+          }`}
         >
           <img
             className="absolute w-[50%] h-auto object-contain   max-w-[1500px] left-[50%] translate-x-[-50%] mx-auto"
@@ -53,114 +60,194 @@ const Features = ({ id, onIntersectionChange }) => {
               </div>
             </div>
             <div className="max-w-5xl mx-auto flex flex-col mt-20 gap-20">
-              <div className=" h-[380px]">
-                <div className="flex flex-col md:flex-row h-full">
-                  <div className="flex-1 bg-[#FFF7F0] rounded-2xl flex items-end justify-center">
-                    <div className="w-[25%] md:w-[45%] ">
-                      <img
-                        className="w-full h-auto object-contain"
-                        src={assets.phone2}
-                        alt="phone"
-                      />
-                      {/* <LazyImage
+              <InView threshold={0.5} triggerOnce>
+                {({ ref, inView }) => (
+                  <div
+                    ref={ref}
+                    className={` h-[380px]  mobile-content-left ${
+                      inView ? "show" : ""
+                    }`}
+                  >
+                    <div className="flex flex-col md:flex-row h-full">
+                      <InView threshold={0.5} triggerOnce>
+                        {({ ref, inView }) => (
+                          <div
+                            ref={ref}
+                            className={`flex-1 bg-[#FFF7F0] rounded-2xl flex items-end justify-center content-left ${
+                              inView ? "show" : ""
+                            }`}
+                          >
+                            <div className="w-[25%] md:w-[45%] ">
+                              <img
+                                className="w-full h-auto object-contain"
+                                src={assets.phone2}
+                                alt="phone"
+                              />
+                              {/* <LazyImage
                         className="w-full h-auto object-contain"
                         src={assets.phone2}
                         alt="phone"
                       /> */}
+                            </div>
+                          </div>
+                        )}
+                      </InView>
+                      <InView threshold={0.5} triggerOnce>
+                        {({ ref, inView }) => (
+                          <div
+                            ref={ref}
+                            className={`flex-1  flex text-center md:text-left items-center md:pl-20 md:py-20 content-right ${
+                              inView ? "show" : ""
+                            }`}
+                          >
+                            <div className="py-5 md:py-0">
+                              <span className="font-inter font-bold text-[#CB6600]">
+                                Feed
+                              </span>
+                              <h1 className="font-bold text-black font-inter text-xl my-4">
+                                Connect with Friends
+                              </h1>
+                              <p className="font-inter font-normal text-[#474747] ">
+                                Make meaningful connections with friends or meet
+                                new people who share your interests. Chat
+                                privately or join group conversations to share
+                                ideas, laughs, and memories.
+                              </p>
+                            </div>
+                          </div>
+                        )}
+                      </InView>
                     </div>
                   </div>
-                  <div className="flex-1  flex text-center md:text-left items-center md:pl-20 md:py-20">
-                    <div className="py-5 md:py-0">
-                      <span className="font-inter font-bold text-[#CB6600]">
-                        Feed
-                      </span>
-                      <h1 className="font-bold text-black font-inter text-xl my-4">
-                        Connect with Friends
-                      </h1>
-                      <p className="font-inter font-normal text-[#474747] ">
-                        Make meaningful connections with friends or meet new
-                        people who share your interests. Chat privately or join
-                        group conversations to share ideas, laughs, and
-                        memories.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+                )}
+              </InView>
               {/* --------------------- */}
 
-              <div className="  h-[380px]">
-                <div className="flex flex-col md:flex-row-reverse h-full">
-                  <div className="flex-1 bg-[#F0FAFF] rounded-2xl flex items-end justify-center">
-                    <div className="w-[25%] md:w-[45%]">
-                      <img
+              <InView threshold={0.5} triggerOnce>
+                {({ ref, inView }) => (
+                  <div
+                    ref={ref}
+                    className={` h-[380px]  mobile-content-right ${
+                      inView ? "show" : ""
+                    }`}
+                  >
+                    <div className="flex flex-col md:flex-row-reverse h-full">
+                      <InView threshold={0.5} triggerOnce>
+                        {({ ref, inView }) => (
+                          <div
+                            ref={ref}
+                            className={`flex-1 bg-[#F0FAFF] rounded-2xl flex items-end justify-center content-right ${
+                              inView ? "show" : ""
+                            }`}
+                          >
+                            <div className="w-[25%] md:w-[45%] ">
+                              <img
+                                className="w-full h-auto object-contain"
+                                src={assets.phone4}
+                                alt="phone"
+                              />
+                              {/* <LazyImage
                         className="w-full h-auto object-contain"
-                        src={assets.phone4}
-                        alt="phone"
-                      />
-                      {/* <LazyImage
-                        className="w-full h-auto object-contain"
-                        src={assets.phone4}
+                        src={assets.phone2}
                         alt="phone"
                       /> */}
+                            </div>
+                          </div>
+                        )}
+                      </InView>
+                      <InView threshold={0.5} triggerOnce>
+                        {({ ref, inView }) => (
+                          <div
+                            ref={ref}
+                            className={`flex-1  flex text-center md:text-left items-center  md:pr-20 md:py-20 content-left ${
+                              inView ? "show" : ""
+                            }`}
+                          >
+                            <div className="py-5 md:py-0">
+                              <span className="font-inter font-bold text-[#008DCB]">
+                                SupaMall
+                              </span>
+                              <h1 className="font-bold text-black font-inter text-xl my-4">
+                                Marketplace
+                              </h1>
+                              <p className="font-inter font-normal text-[#474747] ">
+                                Buy and sell with ease on TalkStuff’s
+                                marketplace. Find items you love or sell what
+                                you don’t need — from vintage pieces to
+                                brand-new gadgets
+                              </p>
+                            </div>
+                          </div>
+                        )}
+                      </InView>
                     </div>
                   </div>
-                  <div className="flex-1  flex text-center md:text-left items-center md:pr-20 md:py-20">
-                    <div className="py-5 md:py-0">
-                      <span className="font-inter font-bold text-[#008DCB]">
-                        Feed
-                      </span>
-                      <h1 className="font-bold text-black font-inter text-xl my-4">
-                        Connect with Friends
-                      </h1>
-                      <p className="font-inter font-normal text-[#474747]">
-                        Make meaningful connections with friends or meet new
-                        people who share your interests. Chat privately or join
-                        group conversations to share ideas, laughs, and
-                        memories.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                )}
+              </InView>
 
               {/* ------------ */}
 
-              <div className="max-w-5xl mx-auto   h-[400px]">
-                <div className="flex flex-col md:flex-row h-full">
-                  <div className="flex-1 bg-[#FFF0FA] rounded-2xl flex items-end justify-center">
-                    <div className="w-[25%] md:w-[45%]">
-                      <img
+              <InView threshold={0.5} triggerOnce>
+                {({ ref, inView }) => (
+                  <div
+                    ref={ref}
+                    className={` h-[400px]  mobile-content-left ${
+                      inView ? "show" : ""
+                    }`}
+                  >
+                    <div className="flex flex-col md:flex-row h-full">
+                      <InView threshold={0.5} triggerOnce>
+                        {({ ref, inView }) => (
+                          <div
+                            ref={ref}
+                            className={`flex-1 bg-[#FFF0FA] rounded-2xl flex items-end justify-center content-left ${
+                              inView ? "show" : ""
+                            }`}
+                          >
+                            <div className="w-[25%] md:w-[45%] ">
+                              <img
+                                className="w-full h-auto object-contain"
+                                src={assets.phone3}
+                                alt="phone"
+                              />
+                              {/* <LazyImage
                         className="w-full h-auto object-contain"
-                        src={assets.phone3}
-                        alt="phone"
-                      />
-                      {/* <LazyImage
-                        className="w-full h-auto object-contain"
-                        src={assets.phone3}
+                        src={assets.phone2}
                         alt="phone"
                       /> */}
+                            </div>
+                          </div>
+                        )}
+                      </InView>
+                      <InView threshold={0.5} triggerOnce>
+                        {({ ref, inView }) => (
+                          <div
+                            ref={ref}
+                            className={`flex-1  flex text-center md:text-left items-center md:pl-20 md:py-20 content-right ${
+                              inView ? "show" : ""
+                            }`}
+                          >
+                            <div className="py-5 md:py-0">
+                              <span className="font-inter font-bold text-[#CB008E]">
+                                LuvHub
+                              </span>
+                              <h1 className="font-bold text-black font-inter text-xl my-4">
+                                Find Love
+                              </h1>
+                              <p className="font-inter font-normal text-[#474747] ">
+                                Swipe, match, and chat with singles near you or
+                                from anywhere around the world. TalkStuff offers
+                                a safe, genuine space to meet your next
+                                relationship
+                              </p>
+                            </div>
+                          </div>
+                        )}
+                      </InView>
                     </div>
                   </div>
-                  <div className="flex-1  flex text-center md:text-left items-center md:pl-20 md:py-20">
-                    <div className="py-5 md:py-0">
-                      <span className="font-inter font-bold text-[#CB008E]">
-                        Feed
-                      </span>
-                      <h1 className="font-bold text-black font-inter text-xl my-4">
-                        Connect with Friends
-                      </h1>
-                      <p className="font-inter font-normal text-[#474747]">
-                        Make meaningful connections with friends or meet new
-                        people who share your interests. Chat privately or join
-                        group conversations to share ideas, laughs, and
-                        memories.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                )}
+              </InView>
 
               {/* ------------ */}
             </div>
@@ -184,25 +271,34 @@ const Features = ({ id, onIntersectionChange }) => {
                   Additional Highlights
                 </h1>
                 <div className="flex flex-wrap gap-10 justify-center min-h-[200px]  mt-12 h-full rounded-lg">
-                  <div className="flex bg-white max-w-[390px]  flex-col items-center rounded-t-lg overflow-hidden">
-                    <div className="bg-[#F9F9FB] flex flex-col items-center ">
-                      <div className="w-[50%] mt-10">
-                        <img
-                          className="w-full h-auto object-contain"
-                          src={assets.phone5}
-                          alt=""
-                        />
-                        {/* <LazyImage
+                  <InView threshold={0.5} triggerOnce>
+                    {({ ref, inView }) => (
+                      <div
+                        ref={ref}
+                        className={`flex bg-white max-w-[390px] min-h-[200px] flex-col items-center rounded-t-lg overflow-hidden content-left ${
+                          inView ? "show" : ""
+                        }`}
+                      >
+                        <div className="bg-[#F9F9FB] flex flex-col items-center ">
+                          <div className="w-[50%] mt-10">
+                            <img
+                              className="w-full h-auto object-contain"
+                              src={assets.phone5}
+                              alt=""
+                            />
+                            {/* <LazyImage
                           className="w-full h-auto object-contain"
                           src={assets.phone5}
                           alt=""
                         /> */}
+                          </div>
+                        </div>
+                        <h2 className="my-1 font-inter text-center text-[#34363C]">
+                          Customizable Profiles
+                        </h2>
                       </div>
-                    </div>
-                    <h2 className="my-1 font-inter text-center text-[#34363C]">
-                      Customizable Profiles
-                    </h2>
-                  </div>
+                    )}
+                  </InView>
                   <div className="flex bg-white max-w-[390px] min-h-[200px] flex-col items-center rounded-t-lg overflow-hidden">
                     <div className="bg-[#F9F9FB] flex flex-col items-center ">
                       <div className="w-[50%] mt-10">
@@ -222,25 +318,34 @@ const Features = ({ id, onIntersectionChange }) => {
                       Advanced Privacy Settings
                     </h2>
                   </div>
-                  <div className="flex bg-white max-w-[390px] min-h-[200px] flex-col items-center rounded-t-lg overflow-hidden">
-                    <div className="bg-[#F9F9FB] flex flex-col items-center ">
-                      <div className="w-[50%] mt-10">
-                        <img
+                  <InView threshold={0.5} triggerOnce>
+                    {({ ref, inView }) => (
+                      <div
+                        ref={ref}
+                        className={`flex bg-white max-w-[390px] min-h-[200px] flex-col items-center rounded-t-lg overflow-hidden content-right ${
+                          inView ? "show" : ""
+                        }`}
+                      >
+                        <div className="bg-[#F9F9FB] flex flex-col items-center ">
+                          <div className="w-[50%] mt-10">
+                            <img
+                              className="w-full h-auto object-contain"
+                              src={assets.phone7}
+                              alt=""
+                            />
+                            {/* <LazyImage
                           className="w-full h-auto object-contain"
-                          src={assets.phone7}
-                          alt=""
-                        />
-                        {/* <LazyImage
-                          className="w-full h-auto object-contain"
-                          src={assets.phone7}
+                          src={assets.phone5}
                           alt=""
                         /> */}
+                          </div>
+                        </div>
+                        <h2 className="my-1 font-inter text-center text-[#34363C]">
+                          In-App Notifications and Reminders
+                        </h2>
                       </div>
-                    </div>
-                    <h2 className="my-1 font-inter text-center text-[#34363C]">
-                      In-App Notifications and Reminders
-                    </h2>
-                  </div>
+                    )}
+                  </InView>
                 </div>
               </div>
             </div>

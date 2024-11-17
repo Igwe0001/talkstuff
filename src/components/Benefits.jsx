@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import LazyImage from "./UI/LazyImage";
 import { InView } from "react-intersection-observer";
 
 const Benefits = ({ id, onIntersectionChange }) => {
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
+
   return (
     <InView
       as="section"
       id={id}
       onChange={(inView) => {
-        console.log(`Section ${id} is in view:`, inView);
-        onIntersectionChange(id, inView);
+        onIntersectionChange(id, inView); // Parent section logic
+        if (inView) setIsSectionVisible(true);
       }}
-      threshold={0.5} // Adjust as needed for when you want the active link to change
+      threshold={0.3} // Adjust as needed for when you want the active link to change
     >
       {({ ref }) => (
         <section
           ref={ref}
           id="Benefits"
-          className="h-[650px] w-full scroll-mt-16 p-8"
+          className={`h-[650px] w-full scroll-mt-16 p-8  section ${
+            isSectionVisible ? "section-visible" : ""
+          }`}
         >
           <div
             style={{
