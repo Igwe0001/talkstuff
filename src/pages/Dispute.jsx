@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "../components/Form";
 
 const Dispute = () => {
   return (
@@ -43,6 +44,7 @@ const Dispute = () => {
           </p>
         </div>
       </div>
+      
     </main>
   );
 };

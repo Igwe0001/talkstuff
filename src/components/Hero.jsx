@@ -5,6 +5,7 @@ import Profile from "./UI/Profile";
 import GroupPicture from "./UI/GroupPicture";
 import Button from "./UI/Button";
 import { InView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const Hero = ({ id, onIntersectionChange }) => {
   return (
@@ -31,15 +32,15 @@ const Hero = ({ id, onIntersectionChange }) => {
               <div className="text-center  max-w-[500px] mx-auto ">
                 <h1 className="font-inter italic font-bold text-3xl">
                   <span className="text-textBlue">Connect</span>,{" "}
-                  <span className="text-textBlue">Date</span>, and{" "}
-                  <span className="text-textBlue">Trade</span>
+                  <span className="text-textBlue">Date</span>,{" "}
+                  <span className="text-textBlue">Buy</span> and{" "}
+                  <span className="text-textBlue">Sell</span>
                 </h1>
                 <h1 className="font-inter font-bold text-3xl">
                   All in One Place
                 </h1>
                 <p className="text-textGrey text-center mt-2">
-                  Discover a new world where friendships flourish, connections
-                  turn into relationships, and shopping meets socializing
+                  A unified Super App for Africa
                 </p>
               </div>
               <div className="mt-5 flex flex-wrap justify-center gap-6">
@@ -47,7 +48,9 @@ const Hero = ({ id, onIntersectionChange }) => {
                   variant="blue"
                   className="transition-all duration-200 ease-in hover:translate-y-1"
                 >
-                  <a href="#Downloads">Download Talkstuff</a>
+                  <a href="https://bit.ly/talkstuffapptest">
+                    Download TalkStuff
+                  </a>
                 </Button>
                 <Button variant="white" className=" flex gap-2 items-center">
                   <a href="#Features" className=" flex gap-2 items-center">

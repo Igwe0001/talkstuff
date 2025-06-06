@@ -23,13 +23,13 @@ const Header = ({ activeLink }) => {
   return (
     <header className="h-16 w-full shadow bg-white flex  items-end px-5 pb-3 fixed z-[10000]">
       <nav className="max-w-7xl w-full mx-auto flex justify-between items-center ">
-        <Link to="/#Home">
+        <Link to="/Home#Home">
           <div className="relative z-20">
-            <img src={assets.logo} className="text-2xl" alt="logo" />
+            <img src={assets.logoImage} className="w-[150px]" alt="logo" />
           </div>
         </Link>
         <ul className=" gap-6 hidden sm:flex">
-          <Link to="/#Home">
+          <Link to="/Home#Home">
             <li>
               <a
                 className={`text-textGrey font-medium ${
@@ -41,7 +41,7 @@ const Header = ({ activeLink }) => {
               </a>
             </li>
           </Link>
-          <Link to="/#Features">
+          <Link to="/Home#Features">
             <li>
               <a
                 className={`text-textGrey font-medium ${
@@ -53,7 +53,7 @@ const Header = ({ activeLink }) => {
               </a>
             </li>
           </Link>
-          <Link to="/#Benefits">
+          <Link to="/Home#Benefits">
             <li>
               <a
                 href="#Benefits"
@@ -65,12 +65,21 @@ const Header = ({ activeLink }) => {
               </a>
             </li>
           </Link>
+          <Link to="/About" onClick={() => window.scrollTo(0, 0)}>
+            <li
+              className={`text-textGrey font-medium ${
+                activeLink === "About" ? "active" : ""
+              }`}
+            >
+              About Us
+            </li>
+          </Link>
         </ul>
-        <Link to="/#Downloads">
-          <Button variant="white" className=" hidden sm:block">
-            <a href="#Downloads">Download App</a>
-          </Button>
-        </Link>
+
+        <Button variant="white" className=" hidden sm:block">
+          <a href="https://bit.ly/talkstuffapptest">Download App</a>
+        </Button>
+
         <div
           onClick={hamburgerEventHandler}
           className="sm:hidden relative z-20"
@@ -90,7 +99,7 @@ const Header = ({ activeLink }) => {
             hamburger ? "trans" : ""
           }`}
         >
-          <Link to="/#Home">
+          <Link to="/Home">
             <li onClick={hamburgerEventHandler}>
               <a
                 className={`text-textGrey text-3xl  font-medium ${
@@ -115,7 +124,7 @@ const Header = ({ activeLink }) => {
             </li>
           </Link>
           <Link to="/#Benefits">
-            <li onClick={hamburgerEventHandler} className="mb-[7rem]">
+            <li onClick={hamburgerEventHandler} className="">
               <a
                 className={`text-textGrey text-3xl font-medium ${
                   activeLink === "Benefits" ? "active" : ""
@@ -124,6 +133,15 @@ const Header = ({ activeLink }) => {
               >
                 Benefits
               </a>
+            </li>
+          </Link>
+          <Link to="/About" onClick={() => window.scrollTo(0, 0)}>
+            <li
+              className={`text-textGrey font-medium mb-[7rem] text-3xl ${
+                activeLink === "About" ? "active" : ""
+              }`}
+            >
+              About Us
             </li>
           </Link>
 

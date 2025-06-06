@@ -7,6 +7,15 @@
     scroll-behavior: smooth;
     scrollbar-width: thin;
   }
+
+  input:focus {
+    outline: 2px solid #EF6924; /* Custom focus border */
+  }
+
+  input {
+    position: relative;
+    z-index: 10; /* Ensure it's above other elements */
+  }
 }
 
 @layer utilities {
@@ -18,7 +27,7 @@
     width: 30px;
     height: 3px;
     margin: 7px 0;
-    background-color: #008dcb;
+    background-color: #EF6924;
     transition: all 0.3s ease-out;
     transform-origin: center;
   }
@@ -51,6 +60,10 @@
     box-shadow: rgba(7, 9, 14, 1) 0px -80px 36px -28px inset;
   }
 
+  .eser {
+    transition: all 0.3s ease;
+  }
+
   .my-scrollable-container {
     overflow-y: scroll;
     scrollbar-width: none;
@@ -61,7 +74,15 @@
   }
 
   .active {
-    color: #008dcb !important;
+    color: #EF6924 !important;
+  }
+
+  .roman {
+    list-style-type: upper-roman; /* Roman numerals (I, II, III...) */
+  }
+
+  .alpha {
+    list-style-type: upper-alpha; /* Lowercase letters (a, b, c...) */
   }
 
   .section {
@@ -97,6 +118,26 @@
     transform: translateX(0);
   }
 
+.services-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.services-top-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-bottom-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
   @media screen and (min-width: 768px) {
     .content {
       opacity: 0;
@@ -130,5 +171,26 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .services-top-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-top-row,
+  .services-bottom-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-header h1 {
+    font-size: 2rem;
+  }
+  
+  .services-header p {
+    font-size: 1rem;
   }
 }

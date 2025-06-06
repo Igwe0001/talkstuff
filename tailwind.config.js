@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        blueButton: "#008dcb",
-        textBlue: "#007DD6",
+        blueButton: "#EF6924",
+        textBlue: "#EF6924",
         textGrey: "#717377",
         textButton: "#525866",
         outlineButton: "#E2E4E9",
@@ -14,8 +14,22 @@ export default {
         green: "#53C693",
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"], // Define Inter with a unique name
-        nunito: ["Nunito Sans", "sans-serif"], // Define Nunito Sans with a unique name
+        inter: ["Inter", "sans-serif"],
+        nunito: ["Nunito Sans", "sans-serif"],
+      },
+      animation: {
+        marquee: "marquee 25s linear infinite",
+        "marquee-reverse": "marquee-reverse 25s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "marquee-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
     },
   },

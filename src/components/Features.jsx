@@ -3,6 +3,8 @@ import { assets } from "../assets/assets";
 import Button from "./UI/Button";
 import LazyImage from "./UI/LazyImage";
 import { InView } from "react-intersection-observer";
+import Form from "./Form";
+import { Link } from "react-router-dom";
 
 // import sort from '../assets/spiral-2'
 
@@ -64,7 +66,7 @@ const Features = ({ id, onIntersectionChange }) => {
                 {({ ref, inView }) => (
                   <div
                     ref={ref}
-                    className={` h-[380px]  mobile-content-left ${
+                    className={` h-[420px] md:h-[380px]  mobile-content-left ${
                       inView ? "show" : ""
                     }`}
                   >
@@ -101,7 +103,7 @@ const Features = ({ id, onIntersectionChange }) => {
                             }`}
                           >
                             <div className="py-5 md:py-0">
-                              <span className="font-inter font-bold text-[#CB6600]">
+                              <span className="font-inter font-bold text-pink-300">
                                 Feed
                               </span>
                               <h1 className="font-bold text-black font-inter text-xl my-4">
@@ -113,6 +115,14 @@ const Features = ({ id, onIntersectionChange }) => {
                                 privately or join group conversations to share
                                 ideas, laughs, and memories.
                               </p>
+                              <Link
+                                to="/Connect"
+                                onClick={() => window.scrollTo(0, 0)}
+                              >
+                                <span className="mt-6 bg-pink-300 text-white inline-block p-2 font-semibold rounded-md">
+                                  Register now
+                                </span>
+                              </Link>
                             </div>
                           </div>
                         )}
@@ -127,7 +137,7 @@ const Features = ({ id, onIntersectionChange }) => {
                 {({ ref, inView }) => (
                   <div
                     ref={ref}
-                    className={` h-[380px]  mobile-content-right ${
+                    className={` h-[420px] md:h-[380px]  mobile-content-right ${
                       inView ? "show" : ""
                     }`}
                   >
@@ -176,6 +186,14 @@ const Features = ({ id, onIntersectionChange }) => {
                                 you don’t need — from vintage pieces to
                                 brand-new gadgets
                               </p>
+                              <Link
+                                to="/Market"
+                                onClick={() => window.scrollTo(0, 0)}
+                              >
+                                <span className="mt-6 bg-[#008DCB] text-white inline-block p-2 font-semibold rounded-md">
+                                  Register now
+                                </span>
+                              </Link>
                             </div>
                           </div>
                         )}
@@ -191,7 +209,7 @@ const Features = ({ id, onIntersectionChange }) => {
                 {({ ref, inView }) => (
                   <div
                     ref={ref}
-                    className={` h-[400px]  mobile-content-left ${
+                    className={` h-[420px] md:h-[380px] mobile-content-left ${
                       inView ? "show" : ""
                     }`}
                   >
@@ -240,6 +258,14 @@ const Features = ({ id, onIntersectionChange }) => {
                                 a safe, genuine space to meet your next
                                 relationship
                               </p>
+                              <Link
+                                to="/Luvhub"
+                                onClick={() => window.scrollTo(0, 0)}
+                              >
+                                <span className="mt-6 bg-[#CB008E] text-white inline-block p-2 font-semibold rounded-md">
+                                  Register now
+                                </span>
+                              </Link>
                             </div>
                           </div>
                         )}
@@ -266,7 +292,7 @@ const Features = ({ id, onIntersectionChange }) => {
               /> */}
             </div>
             <div className="min-h-[500px]  w-full flex items-end z-10 relative">
-              <div className="h-[70%] w-full mx-auto">
+              <div className="h-[50%] w-full mx-auto">
                 <h1 className="text-center font-inter font-bold text-2xl">
                   Additional Highlights
                 </h1>
@@ -350,7 +376,7 @@ const Features = ({ id, onIntersectionChange }) => {
               </div>
             </div>
           </div>
-          <div className="w-full min-h-[620px] px-5  mx-auto mt-32 flex items-center pb-[30px] md:pb-0 bg-[#00405C] relative">
+          <div className="w-full min-h-[620px] px-5  mx-auto mt-32 flex items-center pb-[30px] md:pb-0 bg-[#571D00] relative">
             <div className="w-full absolute left-[50%] translate-x-[-50%] z-[1]">
               <img
                 src={assets.spiral2}
@@ -363,14 +389,14 @@ const Features = ({ id, onIntersectionChange }) => {
                 alt=""
               /> */}
             </div>
-            <div className="w-full h-[60px] md:h-[100px] absolute top-[-40px] sm:top-[-20px] sm:skew-y-[-3deg] lg:top-[-60px] md:top-[-40px] bg-white left-0 skew-y-[-6deg] lg:skew-y-[-3deg] xl:top-[-70px] xl:skew-y-[-1deg] 2xl:top-[-80px] 2xl:skew-y-[0deg]"></div>
+            <div className="w-full h-[70px] md:h-[100px] absolute top-[-33px] sm:top-[-20px] sm:skew-y-[-3deg] lg:top-[-60px] md:top-[-40px] bg-white left-0 skew-y-[-6deg] lg:skew-y-[-3deg] xl:top-[-70px] xl:skew-y-[-1deg] 2xl:top-[-80px] 2xl:skew-y-[0deg]"></div>
 
             <div className="w-full max-w-5xl  mx-auto flex flex-col-reverse md:flex-row items-center">
               <div className="flex-1 flex items-center">
                 <div className="max-w-[450px] mt-10 md:mt-0">
                   <h1 className="text-white font-inter font-semibold text-2xl my-1 max-w-[370px]">
                     Be the First to Experience the{" "}
-                    <span className="text-[#96D0EA]">New Version!</span>{" "}
+                    <span className="text-[#FA7F42]">New Version!</span>{" "}
                   </h1>
                   <p className="text-white font-inter my-3">
                     We’re excited to announce our upcoming release, packed with
@@ -378,42 +404,16 @@ const Features = ({ id, onIntersectionChange }) => {
                     next level! Want early access? Join our exclusive group of
                     beta testers and help shape the future of our app.
                   </p>
-                  <form action="">
-                    <div className="bg-[#EFEFF31A] p-4 rounded-md">
-                      <label className="text-white font-inter" htmlFor="">
-                        Sign up now to get an invite and be the first to try it
-                        out
-                      </label>
-                      <input
-                        style={{
-                          backgroundImage: `url(${assets.mail})`,
-                          backgroundPosition: "10px 7px",
-                          backgroundSize: "25px",
-                        }}
-                        className="bg-no-repeat pl-12 mt-2 placeholder-gray-400 border rounded-md py-2 px-3 w-full"
-                        placeholder="Enter your name"
-                        // class="bg-no-repeat pl-10 bg-left bg-[url('/path/to/your-image.png')] placeholder-gray-400 border rounded-md py-2 px-3 w-full"
-                        type="email"
-                      />
-                    </div>
-                    <Button varient="blue" className="mt-4">
-                      Join the Beta
-                    </Button>
-                  </form>
+                  <Form />
                 </div>
               </div>
               <div className="flex-1  relative flex items-center justify-end">
-                <div className="max-w-[420px] md:translate-x-[10px] xl:translate-x-[135px]">
+                <div className=" md:translate-x-[10px] xl:translate-x-[100px] lg:translate-y-[-50px]">
                   <img
                     className="w-full h-auto object-contain"
                     src={assets.phone8}
                     alt=""
                   />
-                  {/* <LazyImage
-                    className="w-full h-auto object-contain"
-                    src={assets.phone8}
-                    alt=""
-                  /> */}
                 </div>
               </div>
             </div>

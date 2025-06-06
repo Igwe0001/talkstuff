@@ -3,6 +3,7 @@ import { assets } from "../assets/assets";
 import Button from "./UI/Button";
 import LazyImage from "./UI/LazyImage";
 import { InView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const Download = () => {
   const [isSectionVisible, setIsSectionVisible] = useState(false);
@@ -37,11 +38,11 @@ const Download = () => {
               alt="sparks"
               className="w-auto h-auto object-contain"
             /> */}
-                <div className="mt-5 text-center max-w-[800px]">
+                <div className="mt-5 sm:text-center max-w-[800px]">
                   <h1 className="text-white text-2xl font-inter">
                     Discover, Connect, and Trade on TalkStuff!
                   </h1>
-                  <p className="mt-3 text-center text-white">
+                  <p className="mt-3 md:text-center text-white">
                     Your all-in-one app for socializing, dating, and shopping.
                     Whether you’re looking to make new friends, find that
                     special someone, or buy and sell products effortlessly,
@@ -51,7 +52,9 @@ const Download = () => {
                 </div>
                 <div className="mt-5 flex flex-wrap justify-center gap-6">
                   <Button variant="blue" className="">
-                    Download Talkstuff
+                    <a href="https://bit.ly/talkstuffapptest">
+                      Download TalkStuff
+                    </a>
                   </Button>
                   <Button variant="white" className=" flex gap-2 items-center">
                     <a href="#Features" className=" flex gap-2 items-center">
